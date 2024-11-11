@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Grade Sheet</h1>
+    <div id="student-forms">
+        <div class="student-form" id="student-form-1">
+            <label for="student-name-1">Student Name:</label>
+            <input type="text" id="student-name-1" required>
+            <label>Grades:</label>
+            <input type="number" class="grade-input" id="grade-1-1" min="0" max="100" required>
+            <input type="number" class="grade-input" id="grade-1-2" min="0" max="100" required>
+            <input type="number" class="grade-input" id="grade-1-3" min="0" max="100" required>
+            <input type="number" class="grade-input" id="grade-1-4" min="0" max="100" required>
+            <input type="number" class="grade-input" id="grade-1-5" min="0" max="100" required>
+        </div>
+    </div>
+    <button onclick="addStudentForm()">Add Another Student</button>
+    <button onclick="calculateGPAs()">Calculate GPAs</button>
+
+    <div class="results" id="results">
+        <div id="gpa-results"></div>
+        <div class="class-gpa-result" id="class-gpa-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+<!-- I think this class went really well, I enjoyed taking the knowledge I gained in the first part of the class and putting it to a more practical use, it was also cool to recognize the patterns between the different programming languages that I have studied. I think if I were to change or suggest anything about the class it would be a little more hands on learning. That is not my learning style per se but I know that some people are kinestetic and it might be helpful. -->

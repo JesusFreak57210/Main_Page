@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.student-form {
+    margin-bottom: 20px;
+}
+
+.student-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.student-form input {
+    margin-bottom: 10px;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.gpa-result, .class-gpa-result {
+    margin-bottom: 10px;
+}
