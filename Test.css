@@ -23,6 +23,10 @@ body {
     align-items: center;
     padding-top: 20px;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .sidebar .menu img {
@@ -46,10 +50,12 @@ body {
     list-style-type: none;
     width: 100%;
     padding: 0;
+    text-align: left;
 }
 
 .sidebar ul li {
     margin: 15px 0;
+    padding-left: 20px;
 }
 
 .sidebar ul li a {
@@ -73,12 +79,12 @@ body {
 
 .sidebar ul li a img:hover {
     transform: scale(1.15);
-    filter: drop-shadow(0 0 10px #000);
+    filter: drop-shadow(0 0 10px #f76c6c);
 }
 
 /* Main Content Styling */
 .main-content {
-    flex: 1;
+    margin-left: 270px; /* Space for sidebar */
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -106,9 +112,11 @@ body {
     .sidebar {
         width: 100%;
         box-shadow: none;
+        position: relative;
     }
 
     .main-content {
+        margin-left: 0;
         padding: 20px;
     }
 }
