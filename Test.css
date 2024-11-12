@@ -79,7 +79,7 @@ body {
 
 .sidebar ul li a img:hover {
     transform: scale(1.15);
-    filter: drop-shadow(0 0 10px #f76c6c);
+    filter: drop-shadow(0 0 10px #000000);
 }
 
 /* Main Content Styling */
