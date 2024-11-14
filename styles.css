@@ -59,7 +59,7 @@ body {
 .sidebar ul li a {
     display: flex;
     align-items: center;
-    text-decoration: solid;
+    font-weight: bold;
     color: #cf0000;
     padding: 10px;
     border-radius: 5px;
