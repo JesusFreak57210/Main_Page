@@ -33,12 +33,12 @@ body {
 
 .sidebar .menu img {
     margin-bottom: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .sidebar h2 {
     font-size: 1.5em;
-    color: #751515;
+    color: #cf0000;
     margin-bottom: 20px;
     text-align: center;
     font-weight: 600;
