@@ -59,8 +59,7 @@ body {
 .sidebar ul li a {
     display: flex;
     align-items: center;
-    background-color: #000000;
-    text-decoration: none;
+    text-decoration: bold;
     color: #cf0000;
     padding: 10px;
     border-radius: 5px;
@@ -73,12 +72,12 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 .sidebar ul li a img:hover {
     transform: scale(1.15);
-    filter: drop-shadow(0 0 10px #000000);
+    filter: drop-shadow(0 0 10px #ffffff);
 }
 
 /* Main Content Styling */
