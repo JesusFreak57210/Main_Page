@@ -80,6 +80,38 @@ body {
     filter: drop-shadow(0 0 10px #ffffff);
 }
 
+/* Two-Column List Styling */
+.sidebar ul.two-column-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Spacing between items */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.sidebar ul.two-column-list li {
+    padding: 5px;
+    margin: 0;
+}
+
+.sidebar ul.two-column-list li a {
+    color: #000000; /* Dark text for better contrast */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar ul.two-column-list li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul.two-column-list li a img {
+    margin-right: 8px;
+}
+
 /* Main Content Styling */
 .main-content {
     margin-left: 300px; /* Space for sidebar */
@@ -116,5 +148,9 @@ body {
     .main-content {
         margin-left: 0;
         padding: 20px;
+    }
+
+    .sidebar ul.two-column-list {
+        grid-template-columns: 1fr; /* Stack items in a single column on smaller screens */
     }
 }
