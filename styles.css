@@ -16,7 +16,7 @@ body {
 
 /* Sidebar Styling */
 .sidebar {
-    width: 300px;
+    width: 250px;
     background-image: url('images/flag.png');
     background-size: cover;
     background-position: center;
@@ -37,7 +37,7 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 1em;
+    font-size: 1.5em;
     color: #cf0000;
     margin-bottom: 20px;
     text-align: center;
@@ -72,7 +72,7 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background-color: #424242;
+    background-color: #000000;
 }
 
 .sidebar ul li a img:hover {
