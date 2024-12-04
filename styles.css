@@ -16,7 +16,7 @@ body {
 
 /* Sidebar Styling */
 .sidebar {
-    width: 3000px;
+    width: 300px;
     background-image: url('images/flag.png');
     background-size: cover;
     background-position: center;
