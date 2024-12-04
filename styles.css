@@ -71,6 +71,10 @@ body {
     transition: transform 0.3s;
 }
 
+.sidebar ul li a:hover {
+    background-color: #000000;
+}
+
 .sidebar ul li a img:hover {
     transform: scale(1.15);
     filter: drop-shadow(0 0 10px #ffffff);
