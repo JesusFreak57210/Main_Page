@@ -123,10 +123,11 @@ body {
     align-items: flex-start;
 }
 
-.main-content h2 {
+.main-content p {
     font-size: 2.5em;
     color: #cf0000;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .main-content p {
