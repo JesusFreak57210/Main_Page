@@ -132,7 +132,7 @@ body {
 .main-content p {
     font-size: 1.2em;
     color: #cccccc;
-    text-align: center;
+    text-align: left;
 }
 
 /* Responsive Design */
