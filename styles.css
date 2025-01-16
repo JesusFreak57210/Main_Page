@@ -82,7 +82,7 @@ body {
 /* Two-Column List Styling */
 .sidebar ul.two-column-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Two columns */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 10px; /* Spacing between items */
     padding: 20px;
     background: rgba(255, 255, 255, 0.8); /* Transparent white background */
