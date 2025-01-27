@@ -127,6 +127,7 @@ body {
 /* Add Dropdown Functionality to Sidebar */
 .sidebar ul.dropdown-menu {
     background-color: #cccccc;
+    border-radius: 5px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -163,6 +164,7 @@ body {
 }
 
 .sidebar ul.dropdown-menu > li:hover > ul {
+    background-color: #000000;
     display: block; /* Show on hover */
 }
 
