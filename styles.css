@@ -169,6 +169,7 @@ body {
 
 .sidebar ul.dropdown-menu > li:hover {
     background-color: #000000;
+    transform: translateX(5px);
 }
 
 .sidebar ul.dropdown-menu > li > ul li {
