@@ -136,6 +136,7 @@ body {
 .sidebar ul.dropdown-menu > li {
     position: relative; /* Required for dropdown positioning */
     margin: 15px 0;
+    padding: 5px 10px;
 }
 
 .sidebar ul.dropdown-menu > li > h2 {
