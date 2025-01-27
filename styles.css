@@ -164,8 +164,11 @@ body {
 }
 
 .sidebar ul.dropdown-menu > li:hover > ul {
-    background-color: #000000;
     display: block; /* Show on hover */
+}
+
+.sidebar ul.dropdown-menu > li:hover {
+    background-color: #000000;
 }
 
 .sidebar ul.dropdown-menu > li > ul li {
