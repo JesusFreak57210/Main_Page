@@ -126,6 +126,7 @@ body {
 
 /* Add Dropdown Functionality to Sidebar */
 .sidebar ul.dropdown-menu {
+    background-color: #cccccc;
     list-style-type: none;
     margin: 0;
     padding: 0;
