@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<body>	
+<body>
+    	
 	<div class="sidebar">
         <div class="menu">  
             <ul class="dropdown-menu">
@@ -56,6 +57,14 @@
     </div>  
     
     <div class="main-content">
+        <script src="quotes.js"></script>
+        <script>
+            // Random Quote
+            const quoteElement = document.getElementById('quote');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.textContent = quotes[randomIndex];
+        </script>
+
         <h2>Personal Constitution</h2>
         <p>I love Jesus with all my heart. I worship Him and no other. I am a lifelong learner of His word, the Holy Spirit, and Him. I pray with Him like I am talking to a brother. I actively listen to the Holy Spirit and live out His commands. I represent Him in all my relationships with others. I make the devil resent me and my work and will continue to do that until the day I am called home.</p>
         <p>I am a servant. I serve the Lord and his Children willingly and happily. I am the first to show up and the last to leave. I give my best work at any task I am assigned, and always exert 110%.</p>  

@@ -198,3 +198,10 @@ body {
     color: #ffffff;
     transform: translateX(5px);
 }
+
+.quote {
+    margin: 20px 0;
+    font-style: italic;
+    color: #cccccc;
+    text-align: center;
+}
