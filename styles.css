@@ -202,6 +202,8 @@ body {
 .quote {
     margin: 20px 0;
     font-style: italic;
-    color: #cccccc;
+    color: #cf0000;
     text-align: center;
+    background-color: #cccccc;
+
 }
