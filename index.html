@@ -1,82 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
 
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row =>
+                    row.some(cell => cell !== '' && cell !== null && cell !== undefined)
+                );
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Quick Links</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/fire2.png">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    	
-	<div class="sidebar">
-        <div class="menu">  
-            <ul class="dropdown-menu">
-                <li>
-                    <h2 href="#">Church</h2>
-                    <ul>
-                        <li><a href="https://gracecc.ccbchurch.com/group_list.php" target="_blank"><img src="images/CCB.png" alt="CCB" width="30"> CCB</a></li>
-                        <li><a href="https://gracecitychurch.com/" target="_blank"><img src="images/GCC.png" alt="Grace City Church" width="30"> GCC</a></li>
-                        <li><a href="https://expense.zoho.com/app/735084688#/home/dashboard" target="_blank"><img src="images/zoho.png" alt="Zoho" width="30"> Zoho</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <h2 href="#">CyberSecurity</h2>
-                    <ul>
-                        <li><a href="https://account.hackthebox.com/dashboard" target="_blank"><img src="images/htb.png" alt="HTB" width="30"> HTB</a></li>
-                        <li><a href="https://academy.tcm-sec.com/" target="_blank"><img src="images/tcm.png" alt="TCM" width="30"> TCM</a></li>
-                    </ul>
-                </li>                
-                <li>
-                    <h2 href="#">Google</h2>
-                    <ul>            
-                        <li><a href="https://docs.google.com/document/u/0/" target="_blank"><img src="images/Docs.png" alt="Docs" width="30"> Docs</a></li>
-                        <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><img src="images/gmail.png" alt="Gmail" width="30"> Gmail</a></li>
-                        <li><a href="https://www.google.com" target="_blank"><img src="images/google.png" alt="Google" width="30"> Google</a></li>
-                        <li><a href="https://sheets.google.com/" target="_blank"><img src="images/sheets.png" alt="Sheets" width="30"> Sheets</a></li>
-                    </ul>
-                </li>                           
-                <li>
-                    <h2 href="#">Misc.</h2>
-                    <ul>
-                        <li><a href="https://www.amazon.com" target="_blank"><img src="images/amazon.png" alt="Amazon" width="30"> Amazon</a></li>
-                        <li><a href="https://dexscreener.com/multicharts" target="_blank"><img src="images/DEX.png" alt="Dex" width="30"> Dex Screener</a></li>
-                        <li><a href="https://giftster.com/" target="_blank"><img src="images/giftster.png" alt="Giftster" width="30"> Giftster</a></li>
-                        <li><a href="https://github.com/JesusFreak57210/Me-Page/tree/main" target="_blank"><img src="images/github.png" alt="github" width="30"> GitHub</a></li>
-                        <li><a href="https://grok.com/" target="_blank"><img src="images/grok.png" alt="grok" width="30"> Grok</a></li>
-                        <li><a href="https://www.nitrotype.com/" target="_blank"><img src="images/nt.png" alt="NT" width="30"> Nitro Type</a></li>
-			            <li><a href="https://app.outlier.ai/en/expert" target="_blank"><img src="images/outlier.png" alt="Outlier" width="30"> Outlier</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>  
-    
-    <div class="main-content">
-        <p id="quote"></p>
-        <script src="quotes.js"></script>
-        <script>
-            // Random Quote
-            const quoteElement = document.getElementById('quote');
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            quoteElement.textContent = quotes[randomIndex];
-        </script>
-        <hr>
-        <h2>Personal Constitution</h2>
-        <p>I love Jesus with all my heart. I worship Him and no other. I am a lifelong learner of His word, the Holy Spirit, and Him. I pray with Him like I am talking to a brother. I actively listen to the Holy Spirit and live out His commands. I represent Him in all my relationships with others. I make the devil resent me and my work and will continue to do that until the day I am called home.</p>
-        <p>I am a servant. I serve the Lord and his Children willingly and happily. I am the first to show up and the last to leave. I give my best work at any task I am assigned, and always exert 110%.</p>  
-        <p>I love my parents as they have loved me through the good, the bad, and the ugly. Through my hardships, they loved me, so I willingly love them through theirs. I strive to be like my dad, he is an example of what a stronger man looks like. I am constantly observing and celebrating admirable qualities in my Mom that I want in my future spouse.</p>
-        <p>I love my younger siblings and will until we are old and grey. I make sure we have a strong healthy relationship. I never let small worldly problems hinder my relationship with them. I am someone that they look up to and admire.</p>
-        <p>I pursue good healthy relationships with others that I admire. I always build my friends up and never tear them down. I am the friend to others that I would want and have. I respect women around me as God’s daughters and interact with them through this mindset. I never lead them down an emotional rabbit trail prematurely. I devote my time to my brothers around me whom I admire and respect. My close friends are good, strong, God-fearing men and women that I share life with.</p>
-        <p>I am a lifelong learner of the Bible and God’s creation. I seek wisdom and knowledge willingly, with an open heart from trusted sources and people who have earned my respect. I am a humble seeker of truth. I always strive to grow. I call upon the Lord daily to help me with this because I know that only He can provide true change within me.</p>
-        <p>I am healthy and strong. I am committed to regular exercise and a healthy diet so that I am ready to slay any dragons that come to destroy me.</p>
-        <p>I am a generous giver and give back what has been given to me. When God blesses me financially, I immediately and willingly bless his kingdom and the people in it. I don’t covet money over family, friends, and God. Money is not an idol in my life and never will be.</p>
-        <p>When God chooses to give me a wife, she will be the love of my life second only to God. She will flourish under my leadership, and she will feel protected and safe when she is with me. We will stay true to each other until the good Lord calls one of us home. When God chooses to bless us with children, I will be proud to call them my own and they will be proud to call me Dad. I will put their needs before my own, and they will feel safe when they are in my home. I will protect them. I will lead and guide my future family to heaven come hell or high water.</p>
-        <p>I am a; God-fearing, family-loving, knowledge-coveting, Kingdom serving, always learning, always training, bountifully giving, actively listening, God-following, healthy friendship loving stronger man. Living the life of a stronger man is a duty, privilege, and honor. Never will it be a burden, hindrance, or chore. I will love Jesus and live this document out in my life until the day I die. And when the Lord does call me home, my name will be taken off Satan’s hitlist and I will hear these words from my Savior, “Well done, good and faithful servant”.</p>     
-        </p>
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="get">
+            <input type="text" name="q" placeholder="Search Google">
+            <button type="submit">Go</button>
+        </form>
     </div>
-    
+    <div class="links">
+        <a href="https://www.slack.com" target="_blank"><img src="slack-logo.png" alt="Slack"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="youtube-logo.png" alt="YouTube"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="linkedin-logo.png" alt="LinkedIn"></a>
+    </div>
+    <div class="logo-container">
+        <img src="firefox-logo.png" alt="Firefox Logo" class="logo">
+    </div>
 </body>
 </html>
