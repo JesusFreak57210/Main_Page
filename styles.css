@@ -52,6 +52,33 @@ button:hover {
     opacity: 0.7;
 }
 
+.link-logo {
+    width: 30px;
+    margin: 0 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.link-logo:hover {
+    animation: pulse 0.6s infinite;
+}
+.link-logo:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 0, 0.3); /* Semi-transparent yellow circle */
+    border-radius: 50%;
+    z-index: -1; /* Places the circle behind the logo */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
 @media (max-width: 600px) {
     input[type="text"] {
         width: 200px;
