@@ -54,12 +54,11 @@ button:hover {
 
 .link-logo {
     width: 30px;
-    margin: 0 10px;
     position: relative;
     transition: transform 0.3s ease;
 }
 .link-logo:hover {
-    animation: pulse 0.6s infinite;
+    animation: pulse 0.3s infinite;
 }
 .link-logo:hover::after {
     content: '';
@@ -68,8 +67,6 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 0, 0.3); /* Semi-transparent yellow circle */
     border-radius: 50%;
     z-index: -1; /* Places the circle behind the logo */
 }
