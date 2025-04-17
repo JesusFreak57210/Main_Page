@@ -15,7 +15,8 @@ body {
 }
 
 .personal-logo {
-    width: 30px; /* Adjust size as needed */
+   width: 30px;
+   height: auto; /* Adjust size as needed */
 }
 
 .search-container {
