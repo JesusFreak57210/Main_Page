@@ -46,7 +46,6 @@ body {
 
 .jellyfin-logo { width: 45px; height: 45px; min-width: 45px; min-height: 45px; max-width: 45px; max-height: 45px; }
 .workout-logo  { width: 65px; height: 65px; min-width: 65px; min-height: 65px; max-width: 65px; max-height: 65px; }
-.phantom-logo  { width: 65px; height: 65px; min-width: 65px; min-height: 65px; max-width: 65px; max-height: 65px; margin-top: -15px; }
 
 .sub-logo:hover {
     animation: pulse 0.3s infinite;
