@@ -22,17 +22,15 @@ body {
 }
 
 .sub-logo {
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
-    min-height: 60px;
-    max-width: 60px;
-    max-height: 60px;
     object-fit: contain;
     display: block;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
+
+.jellyfin-logo { width: 50px; height: 50px; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; }
+.workout-logo  { width: 70px; height: 70px; min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; }
+.phantom-logo  { width: 70px; height: 70px; min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; }
 
 .sub-logo:hover {
     animation: pulse 0.3s infinite;
