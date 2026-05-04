@@ -22,12 +22,12 @@ body {
 }
 
 .sub-logo {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
-    max-width: 30px;
-    max-height: 30px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
     object-fit: contain;
     display: block;
     overflow: hidden;
@@ -39,8 +39,8 @@ body {
 }
 
 .personal-logo {
-   width: 30px;
-   height: auto; /* Adjust size as needed */
+   width: 40px;
+   height: auto;
 }
 
 .search-container {
