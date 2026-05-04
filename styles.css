@@ -14,6 +14,25 @@ body {
     left: 20px;
 }
 
+.sub-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.sub-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.sub-logo:hover {
+    animation: pulse 0.3s infinite;
+}
+
 .personal-logo {
    width: 30px;
    height: auto; /* Adjust size as needed */
