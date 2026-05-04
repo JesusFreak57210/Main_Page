@@ -12,6 +12,9 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sub-links {
@@ -19,6 +22,7 @@ body {
     flex-direction: column;
     gap: 8px;
     margin-top: 10px;
+    align-items: center;
 }
 
 .sub-logo {
@@ -28,9 +32,9 @@ body {
     transition: transform 0.3s ease;
 }
 
-.jellyfin-logo { width: 50px; height: 50px; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; }
-.workout-logo  { width: 70px; height: 70px; min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; }
-.phantom-logo  { width: 70px; height: 70px; min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px; }
+.jellyfin-logo { width: 45px; height: 45px; min-width: 45px; min-height: 45px; max-width: 45px; max-height: 45px; }
+.workout-logo  { width: 65px; height: 65px; min-width: 65px; min-height: 65px; max-width: 65px; max-height: 65px; }
+.phantom-logo  { width: 65px; height: 65px; min-width: 65px; min-height: 65px; max-width: 65px; max-height: 65px; }
 
 .sub-logo:hover {
     animation: pulse 0.3s infinite;
